@@ -70,13 +70,13 @@ while($s1=<AA>)
       if($b5[$i] eq "E" || $b5[$i] eq "I"){$cdsintron1="$cdsintron1$b2[$i]";    $cdsintron2="$cdsintron2$b3[$i]";}
       ####################################################################################### indel
       if($b5[$i] eq "E" )
-	  {  if($b3[$i] eq "-" && $b3[$i-1] ne "-"){$indel1=1;}
-	     elsif($b3[$i] eq "-" && $b3[$i-1] eq "-"){$indel1++;}
-		 elsif($b3[$i] ne "-" && $b3[$i-1] eq "-"){ $rate=$indel1%3; if($rate>0){$Findel=1;}}
+	  {  if($b2[$i] eq "-" && $b2[$i-1] ne "-"){$indel1=1;}
+	     elsif($b2[$i] eq "-" && $b2[$i-1] eq "-"){$indel1++;}
+	     elsif($b2[$i] ne "-" && $b2[$i-1] eq "-"){ $rate=$indel1%3; if($rate>0){$Findel=1;}}
 	  
-	     if($b4[$i] eq "-" && $b4[$i-1] ne "-"){$indel2=1;}
-		 elsif($b4[$i] eq "-" && $b4[$i-1] eq "-"){$indel2++;}
-	     elsif($b4[$i] ne "-" && $b4[$i-1] eq "-"){ $rate=$indel2%3; if($rate>0){$Findel=1;}}
+	     if($b3[$i] eq "-" && $b3[$i-1] ne "-"){$indel2=1;}
+             elsif($b3[$i] eq "-" && $b3[$i-1] eq "-"){$indel2++;}
+	     elsif($b3[$i] ne "-" && $b3[$i-1] eq "-"){ $rate=$indel2%3; if($rate>0){$Findel=1;}}
 	  }
 	  ######################################################################################## ATG
 	  if($b5[$i] eq "E" && $b5[$i-1] eq "U")
